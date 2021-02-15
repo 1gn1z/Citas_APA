@@ -2,6 +2,9 @@
 
 from pyfiglet import Figlet
 
+# Para salir
+import sys
+
 # Indicamos la fuente para el banner, guardada en una variable
 
 banner = Figlet(font="standard")
@@ -25,7 +28,7 @@ print()
 print()
 
 
-def menu():
+def opciones():
     opcion = None
     while opcion != '8':
         if opcion == '1':
@@ -45,9 +48,7 @@ def menu():
         elif opcion == '8':
             opciones()
         elif opcion == '9':
-            print('Salir')      
-        else:
-            print('opcion invalida, favor de verificar')
+            salir()     
 
         opcion = input('Elige una opcion: ')
 
@@ -56,17 +57,30 @@ def articulo_web():
     print()
     autor = input('\nAutor(es). En el campo "Autor" sólo se escribe el apellido paterno y de los nombres, \n'
     'únicamente se escribe la letra inicial abreviada con punto. (Ejemplo: Okuda, M.).\n')
+
     anio = input('\nAño de publicación:\n')
+
     titulo = input('\nTítulo del artículo:\n')
+
     fecha = input('\nFecha de recuperación del documento: \n'
     'La fecha va en el formato: Mes, día, año(Ejemplo: diciembre 20, 2007)\n')
+
     asociacion = input('\nAsociación que publica el artículo: \n')
+    
     url = input('\nURL: \n')
+
     print('\n\nTu ficha es:\n')
-#            print(autor + titulo + fecha + asociacion + url)
     print(f'{autor}. ({anio}). {titulo}. {fecha}, de {asociacion} Sitio web: {url}')
     print('\n')
 
+# Funcion para salir del programa
+def salir():
+    accion = input('Estas seguro de salir del programa? [S/n] '.lower().strip())
+    if accion == 's':
+        sys.exit(1)
+    else:
+        print('\n\n')
+        menu()
 
 if __name__ == "__main__":
-    menu()
+    opciones()
