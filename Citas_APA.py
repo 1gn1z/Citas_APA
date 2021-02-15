@@ -39,22 +39,7 @@ def menu():
         elif opcion == '5':
             print('opcion 5')
         elif opcion == '6':
-            print()
-            autor = input('Autor(es). En el campo "Autor" sólo se escribe el apellido paterno y de los nombres, \n'
-            'únicamente se escribe la letra inicial abreviada con punto. (Ejemplo: Okuda, M.).\n')
-            anio = input('Año de publicación:\n')
-            titulo = input('Título del artículo:\n')
-            fecha = input('Fecha de recuperación del documento: \n'
-            'La fecha va en el formato: Mes, día, año(Ejemplo: diciembre 20, 2007)\n')
-            asociacion = input('Asociación que publica el artículo: \n')
-            url = input('URL: \n')
-            print('Tu ficha es:')
-#            print(autor + titulo + fecha + asociacion + url)
-            print(f'{autor}. ({anio}). {titulo}. {fecha}, de {asociacion} Sitio web: {url}')
-            print('\n')
-
-
-
+            articulo_web()
         elif opcion == '7':
             print('opcion 7')
         elif opcion == '8':
@@ -67,7 +52,20 @@ def menu():
         opcion = input('Elige una opcion: ')
 
 
-
+def articulo_web():
+    print()
+    autor = input('\nAutor(es). En el campo "Autor" sólo se escribe el apellido paterno y de los nombres, \n'
+    'únicamente se escribe la letra inicial abreviada con punto. (Ejemplo: Okuda, M.).\n')
+    anio = input('\nAño de publicación:\n')
+    titulo = input('\nTítulo del artículo:\n')
+    fecha = input('\nFecha de recuperación del documento: \n'
+    'La fecha va en el formato: Mes, día, año(Ejemplo: diciembre 20, 2007)\n')
+    asociacion = input('\nAsociación que publica el artículo: \n')
+    url = input('\nURL: \n')
+    print('\n\nTu ficha es:\n')
+#            print(autor + titulo + fecha + asociacion + url)
+    print(f'{autor}. ({anio}). {titulo}. {fecha}, de {asociacion} Sitio web: {url}')
+    print('\n')
 
 
 if __name__ == "__main__":
