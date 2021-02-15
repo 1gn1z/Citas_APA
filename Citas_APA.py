@@ -1,7 +1,11 @@
-# Importacion de Pyfiglet para el banner (Inicial con mayusculas!)
+# Importacion de Pyfiglet para el banner (Inicial de Figlet con mayusculas!)
 
-from Pyfiglet import Figlet
+from pyfiglet import Figlet
 
 # Indicamos la fuente para el banner, guardada en una variable
 
-banner = Figlet(font="graffiti")
+banner = Figlet(font="standard")
+
+# Imprimimos el texto que queramos como banner
+print(banner.renderText('Citas  APA'))
+
