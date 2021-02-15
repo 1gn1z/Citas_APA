@@ -19,6 +19,30 @@ print('4.- Si tu fuente es un artículo de ENCICLOPEDIA')
 print('5.- Si tu fuente es un artículo o capítulo de un LIBRO')
 print('6.- Si tu fuente es un artículo de PÁGINA WEB')
 print('7.- Si tu fuente es el artículo de un PERIÓDICO, un JOURNAL (Publicación académica especializada.) o REVISTA en una BASE DE DATOS ')
+print('\n8.- Para SALIR')
 print()
 print()
-opcion = int(input('Elige una opcion: '))
+
+opcion = None
+
+while opcion != '8':
+    if opcion == '1':
+        print('opcion 1 elegida')
+    elif opcion == '2':
+        print('opcion 2')
+    elif opcion == '3':
+        print('opcion 3')    
+    elif opcion == '4':
+        print('opcion 4')   
+    elif opcion == '5':
+        print('opcion 5')
+    elif opcion == '6':
+        print('opcion 6')
+    elif opcion == '7':
+        print('opcion 7')  
+    elif opcion == '8':
+        print('Salir')      
+    else:
+        print('opcion invalida, favor de verificar')
+
+    opcion = input('Elige una opcion: ')
