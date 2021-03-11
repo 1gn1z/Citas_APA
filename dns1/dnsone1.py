@@ -3,10 +3,10 @@ from collections import OrderedDict
 from pyfiglet import Figlet
 
 banner = Figlet(font="standard")
-
+banner2 = Figlet(font="graffiti")
 # Imprimimos el texto que queramos como banner
 print(banner.renderText('Dns-One'))
-print(banner.renderText('by  1gn1z'))
+print(banner2.renderText('by 1gn1z'))
 
 
 def menu_loop():
@@ -22,7 +22,57 @@ def menu_loop():
             menu[accion]()
 
 
-def exit():
+def options():
+    option = None
+    while option != 'x':
+        if option == 'a':
+            host_address()
+        elif option == 'b':
+            authoritative_name_server()
+        elif option == 'c':
+            mail_destination()
+        elif option == 'd':
+            mail_forwarder()
+        elif option == 'e':
+            canonical_name_for_alias()
+        elif option == 'f':
+            start_of_a_zone_of_authority()
+        elif option == 'g':
+            mailbox_domain_name()
+        elif option == 'h':
+            mail_group_member()
+        elif option == 'i':
+            mail_rename_domain_name()
+        elif option == 'j':
+            null_rr()
+        elif option == 'k':
+            well_known_service_description()
+        elif option == 'l':
+            domain_name_pointer()
+        elif option == 'm':
+            host_information()
+        elif option == 'n':
+            mailbox_or_mail_list_information()
+        elif option == 'o':
+            mail_exchange()
+        elif option == 'p':
+            text_strings()
+        elif option == 'q':
+            transfer_of_an_entire_zone()
+        elif option == 'r':
+            mailbox_related_records()
+        elif option == 's':
+            mail_agent_rr()
+        elif option == 't':
+            all_records()
+        elif option == 'x':
+            exit_program()
+
+
+
+
+
+def exit_program():
     """Exit"""
     accion = input('Are you sure? [Y/n] '.lower().strip())
     if accion == 'y':
