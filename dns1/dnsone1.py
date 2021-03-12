@@ -88,7 +88,7 @@ def exit_program():
 
 def host_address():
     """Host address"""
-    print('link example: page.com ')
+    print('link, example: page.com ')
     link = input('>>> ')
     query = dns.resolver.query(link, "A")
     print()
@@ -99,7 +99,7 @@ def host_address():
 
 def authoritative_name_server():
     """Authoritative name server"""
-    print('link example: page.com ')
+    print('link, example: page.com ')
     link = input('>>> ')
     query = dns.resolver.query(link, "NS")
     print()
@@ -110,6 +110,14 @@ def authoritative_name_server():
 
 def mail_destination():
     """Mail destination"""
+    print('link, example: page.com ')
+    link = input('>>> ')
+    query = dns.resolver.query(link, "MD")
+    print()
+    print('Mail destination:')
+    for i in query:
+        print(i)
+    print()
 
 def mail_forwarder():
     """Mail forwarder"""
