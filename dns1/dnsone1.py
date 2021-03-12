@@ -32,6 +32,7 @@ def options():
             host_address()
         elif option == 'b':
             authoritative_name_server()
+
         elif option == 'c':
             mail_destination()
         elif option == 'd':
@@ -111,14 +112,18 @@ def authoritative_name_server():
 def mail_destination():
     """Mail destination"""
     print('link, example: page.com ')
-    link = input('>>> ')
-    query = dns.resolver.query(link, "MD")
-    print()
-    print('Mail destination:')
-    for i in query:
-        print(i)
-    print()
-
+    try:
+        link = input('>>> ')
+        query = dns.resolver.query(link, "MD")
+        print()
+        print('Mail destination:')
+        for i in query:
+            print(i)
+        print()
+    except:
+        print()
+        print('Information not available')
+        print()
 def mail_forwarder():
     """Mail forwarder"""
 
