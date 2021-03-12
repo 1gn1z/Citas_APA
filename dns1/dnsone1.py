@@ -8,6 +8,10 @@ banner2 = Figlet(font="graffiti")
 print(banner.renderText('Dns-One'))
 print(banner2.renderText('by 1gn1z'))
 
+print()
+print()
+print('Options: ')
+print()
 
 def menu_loop():
     """Menu"""
@@ -85,7 +89,14 @@ def exit_program():
 
 def host_address():
     """Host address"""
-
+    print('link example: page.com ')
+    link = input('>>> ')
+    query = dns.resolver.query(link, "A")
+    print()
+    print('Information:')
+    for i in query:
+        print(i)
+    print()
 def authoritative_name_server():
     """Authoritative name server"""
 
@@ -167,3 +178,6 @@ menu = OrderedDict([
     ('t', all_records),
     ('x', exit)
 ])
+
+if __name__ == '__main__':
+    menu_loop()
