@@ -4,7 +4,6 @@ from pyfiglet import Figlet
 
 banner = Figlet(font="standard")
 banner2 = Figlet(font="graffiti")
-# Imprimimos el texto que queramos como banner
 print(banner.renderText('Dns-One'))
 print(banner2.renderText('by 1gn1z'))
 
@@ -93,12 +92,21 @@ def host_address():
     link = input('>>> ')
     query = dns.resolver.query(link, "A")
     print()
-    print('Information:')
+    print('Host address:')
     for i in query:
         print(i)
     print()
+
 def authoritative_name_server():
     """Authoritative name server"""
+    print('link example: page.com ')
+    link = input('>>> ')
+    query = dns.resolver.query(link, "NS")
+    print()
+    print('Authoritative name server:')
+    for i in query:
+        print(i)
+    print()
 
 def mail_destination():
     """Mail destination"""
@@ -176,7 +184,7 @@ menu = OrderedDict([
     ('r', mailbox_related_records),
     ('s', mail_agent_rr),
     ('t', all_records),
-    ('x', exit)
+    ('x', exit_program)
 ])
 
 if __name__ == '__main__':
