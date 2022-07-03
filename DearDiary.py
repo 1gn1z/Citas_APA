@@ -333,7 +333,9 @@ menu = OrderedDict([
 # imprimimos que la contraseña es incorrecta, y que un password es requerido para tener acceso al diario.
 # finalmente salimos del programa con "sys.exit()"
 
+
 # BANNER LISTO - Banner 'Dear Diary'
+
 
 banner1 = Figlet(font='graffiti')
 banner1_print = print(banner1.renderText('Dear Diary'))    # Simplemente lo imprimimos, para que se muestre al inicio
